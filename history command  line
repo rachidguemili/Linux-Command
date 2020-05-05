@@ -1,0 +1,212 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+wilder@wilder-ThinkPad-T440p:~$ ls
+Desktop    Downloads  node-v12.16.3-linux-x64  Public     Videos
+Documents  Music      Pictures                 Templates
+wilder@wilder-ThinkPad-T440p:~$ /home
+bash: /home: Is a directory
+wilder@wilder-ThinkPad-T440p:~$ cd /home
+wilder@wilder-ThinkPad-T440p:/home$ ls
+wilder
+wilder@wilder-ThinkPad-T440p:/home$ cd wilder
+wilder@wilder-ThinkPad-T440p:~$ ls
+Desktop    Downloads  node-v12.16.3-linux-x64  Public     Videos
+Documents  Music      Pictures                 Templates
+wilder@wilder-ThinkPad-T440p:~$ /home
+bash: /home: Is a directory
+wilder@wilder-ThinkPad-T440p:~$ cd /usr
+wilder@wilder-ThinkPad-T440p:/usr$ ls
+bin  games  include  lib  libexec  local  sbin  share  src
+wilder@wilder-ThinkPad-T440p:/usr$ cd share
+wilder@wilder-ThinkPad-T440p:/usr/share$ ls
+aclocal                gnome                           mozilla
+acpi-support           gnome-background-properties     nano
+adduser                gnome-bluetooth                 nautilus-share
+adium                  gnome-control-center            netpbm
+alsa                   gnome-session                   netplan
+alsa-base              gnome-settings-daemon           orca
+appdata                gnome-shell                     os-prober
+app-info               gnome-software                  p11-kit
+app-install            gnupg                           package-data-downloads
+applications           goa-1.0                         PackageKit
+apport                 grilo-plugins                   pam
+apturl                 groff                           pam-configs
+aspell                 grub                            perl
+avahi                  grub-gfxpayload-lists           perl5
+backgrounds            gst-plugins-base                perl-openssl-defaults
+base-files             gstreamer-1.0                   pixmaps
+base-passwd            gtk-doc                         pkgconfig
+bash-completion        gtk-engines                     plymouth
+binfmts                gtksourceview-3.0               pnm2ppa
+brltty                 gutenprint                      polkit-1
+bug                    gvfs                            poppler
+ca-certificates        hal                             popularity-contest
+calendar               help                            ppd
+cmake                  help-langpack                   ppp
+cogl                   hplip                           publicsuffix
+color                  hunspell                        pulseaudio
+colord                 i18n                            pyshared
+command-not-found      ibus                            python
+common-licenses        ibus-table                      python3
+consolefonts           icons                           python-apt
+console-setup          ImageMagick-6                   readline
+consoletrans           im-config                       rsyslog
+cups                   info                            seahorse
+dbus-1                 initramfs-tools                 secureboot
+dconf                  intltool-debian                 sensible-utils
+debconf                iptables                        session-migration
+debianutils            iso-codes                       skypeforlinux
+defaults               java                            snmp
+desktop-directories    kde4                            software-properties
+dict                   keyrings                        sounds
+dictionaries-common    kservices5                      speech-dispatcher
+distro-info            language-selector               ssl-cert
+djvu                   language-support                system-config-printer
+dns                    language-tools                  systemd
+dnsmasq-base           libaudio2                       tabset
+doc                    libc-bin                        terminfo
+doc-base               libdrm                          themes
+dpkg                   libgnomekbd                     thumbnailers
+drirc.d                libgphoto2                      ubuntu
+emacs                  libgweather                     ubuntu-advantage-tools
+enchant                liblangtag                      ubuntu-drivers-common
+eog                    liblouis                        ubuntu-release-upgrader
+evince                 liblouisutdml                   ubuntu-wayland
+evolution-data-server  libparse-debianchangelog-perl   ufw
+file                   librevenge                      unattended-upgrades
+file-roller            libsensors4                     unity
+fontconfig             libthai                         update-manager
+fonts                  libwacom                        update-notifier
+fonts-droid-fallback   lightdm                         upstart
+fonts-sil-padauk       lintian                         usb-creator
+foo2qpdl               linux-sound-base                usb_modeswitch
+foo2zjs                locale                          vim
+fwupd                  locale-langpack                 wayland-sessions
+gcc-8                  locales                         X11
+GConf                  m2300w                          xdg-desktop-portal
+gdb                    man                             xml
+gdm                    man-db                          xsessions
+gedit                  media-player-info               yelp
+GeoIP                  menu                            yelp-xsl
+gettext                metainfo                        zenity
+gettext-0.19.8         mime                            zoneinfo
+ghostscript            misc                            zsh
+glib-2.0               mobile-broadband-provider-info
+glvnd                  mousetweaks
+wilder@wilder-ThinkPad-T440p:/usr/share$ cd
+wilder@wilder-ThinkPad-T440p:~$ ls
+Desktop    Downloads  node-v12.16.3-linux-x64  Public     Videos
+Documents  Music      Pictures                 Templates
+wilder@wilder-ThinkPad-T440p:~$ cd node*
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ ls
+bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ cd nbin
+bash: cd: nbin: No such file or directory
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ ls
+bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ cd bin
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ ls
+node  npm  npx
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ sudo node -appt
+[sudo] password for wilder: 
+Sorry, try again.
+[sudo] password for wilder: 
+sudo: node: command not found
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ sudo -apt node
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ sudo -apt node
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ sudo apt install node
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package node
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ ls
+node  npm  npx
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ cd..
+cd..: command not found
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ .
+bash: .: filename argument required
+.: usage: . filename [arguments]
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ ./
+bash: ./: Is a directory
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ /
+bash: /: Is a directory
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64/bin$ cd ..
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ ls
+bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ sudo apt install node
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package node
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ cd ..
+wilder@wilder-ThinkPad-T440p:~$ sudo apt install node
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package node
+wilder@wilder-ThinkPad-T440p:~$ ls
+Desktop    Downloads  node-v12.16.3-linux-x64  Public     Videos
+Documents  Music      Pictures                 Templates
+wilder@wilder-ThinkPad-T440p:~$ cd node
+bash: cd: node: No such file or directory
+wilder@wilder-ThinkPad-T440p:~$ cd node*
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ 
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ ls
+bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ open rEADME
+Couldn't get a file descriptor referring to the console
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ OPEN README.MD
+OPEN: command not found
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ OPEN README
+OPEN: command not found
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ PWD
+PWD: command not found
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ pwd
+/home/wilder/node-v12.16.3-linux-x64
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ cd
+wilder@wilder-ThinkPad-T440p:~$ ls
+Desktop    Downloads  node-v12.16.3-linux-x64  Public     Videos
+Documents  Music      Pictures                 Templates
+wilder@wilder-ThinkPad-T440p:~$ cd ..
+wilder@wilder-ThinkPad-T440p:/home$ ls
+wilder
+wilder@wilder-ThinkPad-T440p:/home$ cd ..
+wilder@wilder-ThinkPad-T440p:/$ ls
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swapfile  usr
+wilder@wilder-ThinkPad-T440p:/$ cd ..
+wilder@wilder-ThinkPad-T440p:/$ ls
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swapfile  usr
+wilder@wilder-ThinkPad-T440p:/$ cd ~/node*
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ ls
+bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ dir
+bin  CHANGELOG.md  include  lib  LICENSE  README.md  share
+wilder@wilder-ThinkPad-T440p:~/node-v12.16.3-linux-x64$ cd
+wilder@wilder-ThinkPad-T440p:~$ ls
+Desktop    Downloads  node-v12.16.3-linux-x64  Public     Videos
+Documents  Music      Pictures                 Templates
+wilder@wilder-ThinkPad-T440p:~$ cd /home
+wilder@wilder-ThinkPad-T440p:/home$ ls
+wilder
+wilder@wilder-ThinkPad-T440p:/home$ 
